@@ -1,0 +1,36 @@
+/* @import 'https://cdn.jsdelivr.net/gh/lazywasabi/thai-web-fonts@7/fonts/Loma/Loma.css'; */
+body {
+  font: 1.3rem Inconsolata, monospace;
+  border: 1px solid black;
+  padding-top: 16px;
+  padding-right: 20px;
+  padding-bottom: 50px;
+  padding-left: 20px;
+}
+body {
+}
+b {
+  font: 1.3rem Inconsolata, monospace;
+}
+
+center {
+  font: 1.3rem Inconsolata, monospace;
+  font-size: 25px;
+  padding-top: 1px;
+  padding-right: 1px;
+  padding-bottom: 1px;
+  padding-left: 1px;
+}
+
+input {
+  font: 1.3rem Inconsolata, monospace;
+  font-size: 18px;
+  border: 2px solid blue;
+  width: 100%;
+}
+pre {
+  font-size: 10px;
+  position: absolute;
+  top: 5px;
+  right: 15px;
+}
