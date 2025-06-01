@@ -42,7 +42,7 @@ function sercxi() {
   }
 
   //แปลงวัตถุ (rezulto) เป็นสตริง
-  let sercxitaj_vortoj = rezulto.toString().replace(/\\t,/g, "<br><hr>");
+  let sercxitaj_vortoj = rezulto.toString().replace(/\\t,/gm, "<br><hr>").replace(/\\t/gm, "<hr>");
   console.log('SERCXITAJ_VORTOJ', sercxitaj_vortoj)
 
   //[4]ไฮไลท์คำใน sercxitaj_vortoj
