@@ -10,10 +10,31 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <pre id="statistiko"></pre>
-<center>💾 Glossary for Open Source Software</center><br>
+<center>💾อภิธานศัพท์สำหรับซอฟต์แวร์โอเพนซอร์ส</center><br>
+<center><small>Glossary for Open Source Software</small></center><br>
 <input id="enigo" name="via_ujo" oninput="sercxi()" onfocus="sercxi()"></input>
+<button id="forigi" onclick="forigi()">⌫</button><br>
 <div id="preciza_eligo"></div>
 <div id="eligo"></div>
+<script>
+  type="text/javascript">
+  document.getElementById("enigo").addEventListener("keyup",
+  function(event){eotajpu(this,event);}, true);
+  //forigi enigaĵojn
+  function forigi() {
+    document.getElementById("enigo").value = "";
+    sercxi();
+    document.getElementById("enigo").focus()
+  }
+
+  //โหลดคำจาก hash และดำเนินการรัน sercxi()
+if (location.hash) {
+        let vorto_hash = location.hash
+        let vorto_hash_slice = vorto_hash.slice(1)
+        document.getElementById('enigo').value = decodeURI(vorto_hash_slice)
+        sercxi()
+      }
+</script>
 <div id="vortaro" style="display:none;">
 abort เลิกทำ, เลิกทำกลางคัน \t
 
@@ -2228,7 +2249,7 @@ hexadecimal ฐานสิบหก \t
 
 hexagon รูปหกเหลี่ยม \t
 
-hibernate \t
+hibernate จำศีล \t
 
 
 hidden ที่ซ่อน, ที่แอบ \t
@@ -28577,7 +28598,7 @@ nested  ซ้อนกัน\t
 distro ดิสโทร\t
 
 </div>
-  <script  src="./script.js"></script>
-
+<script  src="./script.js"></script>
 </body>
+<footer><a href="https://github.com/warut92/glossary101">Glossary101 on GitHub</a></footer>
 </html>

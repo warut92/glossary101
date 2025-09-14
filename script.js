@@ -23,6 +23,8 @@ function sercxi() {
   //[2] ค้นหา
   //เรียกข้อความที่จะค้นหา
   let str_sxablono = document.getElementById("enigo").value;
+  //ใส่ hash ที่ url
+  location.hash = str_sxablono
 
   //ค้นหาข้อความด้วย regex
   //https://stackoverflow.com/a/50828436
