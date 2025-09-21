@@ -23,7 +23,6 @@ let dictionary = [];
       console.error("Error loading JSON:", err);
     });
 
-<<<<<<< HEAD
   // Debounce function
   function debounce(fn, delay) {
     let timeout;
@@ -31,36 +30,6 @@ let dictionary = [];
       clearTimeout(timeout);
       timeout = setTimeout(() => fn.apply(this, args), delay);
     };
-=======
-function sercxi() {
-  //ตั้งตัวสำหรับสร้างลูป
-  let vortoj_Arr, i;
-  for (i = 0; i < disigitaj_vortoj.length; i++) {
-    vortoj_Arr = disigitaj_vortoj[i];
-  }
-  //filter array จาก textInput
-  //[2] ค้นหา
-  //เรียกข้อความที่จะค้นหา
-  let str_sxablono = document.getElementById("enigo").value;
-  //ใส่ hash ที่ url
-  location.hash = str_sxablono
-
-  //ค้นหาข้อความด้วย regex
-  //https://stackoverflow.com/a/50828436
-  let sxablono_regex = new RegExp(`${str_sxablono}`, "g");
-  //https://www.delftstack.com/howto/javascript/javascript-filter-string/
-  let rezulto = disigitaj_vortoj.filter(function (str) {
-    return sxablono_regex.test(str);
-  });
-  console.log('REZULTO', rezulto)
-  //การแสดงผลการค้นหาแบบตรงตัว
-
-  //[3] เตรียมแสดงผล
-  //สร้างข้อความ หากข้อความค้นหาว่างเปล่า
-  if (str_sxablono === "") {
-    rezulto = "ไม่พบคำค้นหา";
-    return document.getElementById("eligo").innerHTML = "<hr>" + rezulto;
->>>>>>> ab5a7ec47df49d812e92bd50784736e5629c578d
   }
 
   // Update results on input
