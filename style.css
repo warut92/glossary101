@@ -2,7 +2,9 @@
 body {
   font: 1.3rem Inconsolata, monospace;
   font-size: 25px;
-  border: 1px solid black;
+  border: 1px solid white;
+  color: aliceblue;
+  background-color: #303030;
   padding-top: 16px;
   padding-right: 20px;
   padding-bottom: 50px;
@@ -23,9 +25,11 @@ center {
 }
 
 input {
-  font: 1.3rem Inconsolata, monospace;
-  font-size: 18px;
+  font: 3rem Inconsolata, monospace;
+  color: aliceblue;
+  font-size: 30px;
   border: 2px solid blue;
+  background-color: #303030;
   width: 100%;
 }
 pre {

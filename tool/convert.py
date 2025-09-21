@@ -1,32 +1,25 @@
 import json
+import re
 
-# Read your text file
-with open("words.txt", "r", encoding="utf-8") as f:
-    lines = f.readlines()
+def txt_to_json(input_file, output_file):
+    data = []
 
-data = []
+    with open(input_file, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
 
-for line in lines:
-    line = line.strip()
-    if not line:
-        continue
+            # Split into English + Thai using regex (Thai Unicode range)
+            match = re.match(r"^(.*?)([\u0E00-\u0E7F].*)$", line)
+            if match:
+                english = match.group(1).strip()
+                thai = match.group(2).strip()
+                data.append({"english": english, "thai": thai})
     
-    # Split English and Thai parts (split only on the first space)
-    parts = line.split(" ", 1)
-    if len(parts) == 2:
-        english, thai = parts
-        # Clean Thai part (remove trailing \t if exists)
-        thai = thai.replace("\\t", "").strip()
-        # Split multiple Thai translations by comma
-        thai_list = [t.strip() for t in thai.split(",")]
-        
-        data.append({
-            "english": english,
-            "thai": thai_list
-        })
+    # Save JSON
+    with open(output_file, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
 
-# Save to JSON
-with open("words.json", "w", encoding="utf-8") as f:
-    json.dump(data, f, ensure_ascii=False, indent=2)
-
-print("✅ Conversion completed! File saved as words.json")
+# Example usage
+txt_to_json("words.txt", "th_oss.json")

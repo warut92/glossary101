@@ -78,15 +78,15 @@ let dictionary = [];
       const { item, matches } = result;
       let div = document.createElement("div");
       div.classList.add("entry");
-
+    
       let eng = document.createElement("span");
       eng.classList.add("english");
       eng.innerHTML = highlightText(item.english, matches, "english");
-
+    
       let thai = document.createElement("span");
       thai.classList.add("thai");
-      thai.innerHTML = " → " + item.thai.map(t => highlightText(t, matches, "thai")).join(", ");
-
+      thai.innerHTML = " : " + highlightText(item.thai, matches, "thai");
+    
       div.appendChild(eng);
       div.appendChild(thai);
       resultsDiv.appendChild(div);
