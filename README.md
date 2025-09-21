@@ -9,6 +9,6 @@ Glossary for Open Source Software is the Web site created by Open Source Project
 # จุดประสงค์
 เพื่อเป็นข้อมูลอ้างอิงในการแปลโครงการโอเพนซอร์ต่าง ๆ
 
-# ทรัยากร
+# ทรัพยากร
 1. ข้อมูลนำมาจาก https://web.archive.org/web/20150630053825/http://www.opentle.org/ossglossary/index.php
 2. fuse.js
